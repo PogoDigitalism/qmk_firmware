@@ -1,3 +1,7 @@
+# Note from Pogo:
+I want to program in custom reactivity onto my Keychron board, hence why I decided to fork it and insert my own `rgb_matrix` animations. This is still a wip.
+MAYBE I'll make cool wrapper where you can write your own Keychron board reactivity via Python code.
+
 # Keychron QMK Firmware
 
 [![Star this repo](https://img.shields.io/github/stars/Keychron/qmk_firmware?style=social&label=Star%20this%20repo)](https://github.com/Keychron/qmk_firmware)
