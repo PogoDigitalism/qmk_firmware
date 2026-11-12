@@ -24,6 +24,18 @@ enum layers {
     WIN_FN,
 };
 
+uint32_t hit_timestamps[LED_HITS_TO_REMEMBER] = {0};
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    if (record->event.pressed) {
+        for (uint8_t i = 0; i < LED_HITS_TO_REMEMBER - 1; i++) {
+            hit_timestamps[i] = hit_timestamps[i + 1];
+        }
+        hit_timestamps[LED_HITS_TO_REMEMBER - 1] = timer_read32();
+    }
+    return true;
+}
+
 #define FN_MAC MO(MAC_FN)
 #define FN_WIN MO(WIN_FN)
 
