@@ -24,6 +24,7 @@ enum layers {
     WIN_FN,
 };
 
+// this is unused rn as i tested timestamp based random rgb splahes, but red splashing does look the best
 uint32_t hit_timestamps[LED_HITS_TO_REMEMBER] = {0};
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
